@@ -9,10 +9,11 @@
 <script>
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
+import Logo from '../components/Logo.vue'
 export default {
   name: 'IndexPage',
   components:{
-    Header,Footer
+    Header,Footer,Logo
   }
 }
 </script>

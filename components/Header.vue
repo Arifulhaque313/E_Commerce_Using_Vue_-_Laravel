@@ -3,9 +3,7 @@
         <div class="container ">
            <!-- hearder first part start -->
             <div class="flex justify-between items-center py-6">
-                <nuxt-link to="/" class="flex font-size-32 font-medium items-center">
-                    <img class="mr-3" src="~/assets/images/logo.png" alt="logo">Online Shop
-                </nuxt-link>
+                <Logo/>
 
                 <div class="w-96">
                     <div class="border border-gray-red-500 p-1 flex rounded-full items-center">
