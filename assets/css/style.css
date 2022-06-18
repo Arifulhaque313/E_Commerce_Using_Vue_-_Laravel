@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+   font-family: 'Poppins', sans-serif;
+   color:#4f4f4f; 
+}
+.container {
+    @apply mx-auto;
+    max-width: 1400px;
+}
+.font-size-32{
+    font-size: 32px;
+}
+
+.bs-icon-box{
+    width: 60px;
+    height: 60px;
+    
+}
+
+.bs-orange-color{
+    color: #FF5C00;
+}
+
+.bs-orange-bg{
+    color: #FF5C00;
+}
