@@ -69,7 +69,7 @@
         </vue-slick-carousel>
 
         <!-- search by category section start -->
-        <div class="container">
+        <div class="container ">
             <h3 class="text-3xl mb-6 text-gray-800">Search by Category</h3>
             <div class="flex items-center">
                 <div style="height:3px" class="w-36  bg-green-500"></div>
@@ -77,17 +77,20 @@
             </div>
 
             <!-- category carousel start -->
-         <vue-slick-carousel v-bind="categoryCarouselSettings"> 
-            <div class="bg-gray-200 p-4 m-4">
-              <div class="h-32 flex justify-center items-center">
-                  <img src="~/assets/images/caro1.png" alt="">
-              </div>
-              <div class="text-center">
-                  <h3>Groceries</h3>
+         <vue-slick-carousel class="category-carousel" v-bind="categoryCarouselSettings"> 
+            <div class="div">
+                <div class="bg-gray-200 p-4 m-4 slide">
+                <div class="h-32 flex justify-center items-center">
+                    <img src="~/assets/images/caro1.png" alt="">
+                </div>
+                <div class="text-center">
+                    <h3>Groceries</h3>
+                </div>
               </div>
             </div>
 
-            <div class="bg-gray-200 p-4 m-4">
+            <div>
+              <div class="bg-gray-200 p-4 m-4 slide">
               <div class="h-32 flex justify-center items-center">
                   <img src="~/assets/images/caro2.png" alt="">
               </div>
@@ -95,8 +98,10 @@
                   <h3>Groceries</h3>
               </div>
             </div>
+            </div>
 
-            <div class="bg-gray-200 p-4 m-4">
+            <div>
+              <div class="bg-gray-200 p-4 m-4 slide">
               <div class="h-32 flex justify-center items-center">
                   <img src="~/assets/images/caro3.png" alt="">
               </div>
@@ -104,8 +109,10 @@
                   <h3>Groceries</h3>
               </div>
             </div>
+            </div>
 
-            <div class="bg-gray-200 p-4 m-4">
+           <div>
+             <div class="bg-gray-200 p-4 m-4 slide">
               <div class="h-32 flex justify-center items-center">
                   <img src="~/assets/images/caro4.png" alt="">
               </div>
@@ -113,8 +120,10 @@
                   <h3>Groceries</h3>
               </div>
             </div>
+           </div>
 
-            <div class="bg-gray-200 p-4 m-4">
+            <div>
+              <div class="bg-gray-200 p-4 m-4 slide">
               <div class="h-32 flex justify-center items-center">
                   <img src="~/assets/images/caro5.png" alt="">
               </div>
@@ -122,8 +131,10 @@
                   <h3>Groceries</h3>
               </div>
             </div>
+            </div>
 
-            <div class="bg-gray-200 p-4 m-4">
+           <div>
+             <div class="bg-gray-200 p-4 m-4 slide">
               <div class="h-32 flex justify-center items-center">
                   <img src="~/assets/images/caro6.png" alt="">
               </div>
@@ -131,6 +142,22 @@
                   <h3>Groceries</h3>
               </div>
             </div>
+           </div>
+
+
+             <template #prevArrow="arrowOption">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+             </template>
+
+             <template #nextArrow="arrowOption">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+             </template>
+
+              
          </vue-slick-carousel>
 
         <!-- category carousel end  -->
@@ -156,6 +183,7 @@ export default {
     return{
       categoryCarouselSettings:{
         'slidesToShow':5,
+        prevArrow:'>'
         
       }
     }

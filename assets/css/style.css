@@ -63,4 +63,30 @@ body{
     @apply bs-dark-orange-bg;
     }
 
+   /* ==================
+   category carousel 
+   ================== */
+
+   .category-carousel> svg {
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 45px;
+    top: -46px;
+}
+.category-carousel svg:last-child {
+    right: 0;
+    top: -46px;  
+}
+
+.category-carousel .slick-slide .slick-list> div{
+  margin-right: 20px;
+}
+  
+   
+    
+
 
