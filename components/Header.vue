@@ -26,24 +26,40 @@
             
             <!-- Header second section start  -->
              <div class="flex items-center justify-between">
-                <div class="w-96  bg-green-400 flex items-center py-2 px-3 rounded-full cursor-pointer">
-                    <div class="min-w-max">
-                        <img src="~assets/images/menu-right.png" alt="">
-                    </div>
-                    <div class="w-full text-center text-white mx-6">
-                        Categoriess
+                <div v-click-outside="menuClose" class="w-96 cursor-pointer relative z-30">
+                    <div @click.prevent="openCategories" class="flex items-center bg-green-400 py-2 px-3 rounded-full relative z-30 ">
+                        <div class="min-w-max">
+                            <img src="~assets/images/menu-right.png" alt="">
+                        </div>
+                        <div class="w-full text-center text-white mx-6">
+                            All Categoriess
+                        </div>
+
+                        <div class="min-w-max">
+                            <img src="~assets/images/chevron-down.png" alt="">
+                        </div>
                     </div>
 
-                    <div class="min-w-max">
-                        <img src="~assets/images/chevron-down.png" alt="">
+                    <div v-bind:class="categoriesMenu ? 'block visible' : 'hidden invisible'" class="absolute  z-10 w-full pt-6 pb-6 px-6 -mt-4 bg-green-400 rounded-b-2xl">
+                        <ul>
+                            <li><nuxt-link to=""  class="block text-white py-1 px-4 hover:text-black">Chategory 1</nuxt-link></li>
+                            <li><nuxt-link to="" class="block text-white py-1 px-4 hover:text-black">Chategory 2</nuxt-link></li>
+                            <li><nuxt-link to="" class="block text-white py-1 px-4 hover:text-black">Chategory 3</nuxt-link></li>
+                            <li><nuxt-link to="" class="block text-white py-1 px-4 hover:text-black">Chategory 4</nuxt-link></li>
+                            <li><nuxt-link to="" class="block text-white py-1 px-4 hover:text-black">Chategory 5</nuxt-link></li>
+                            <li><nuxt-link to="" class="block text-white py-1 px-4 hover:text-black">Chategory 6</nuxt-link></li>
+                            <li><nuxt-link to="" class="block text-white py-1 px-4 hover:text-black">Chategory 7</nuxt-link></li>
+                           <li><nuxt-link to="" class="block text-white py-1 px-4 hover:text-black">Chategory 8</nuxt-link></li>
+                        </ul>
                     </div>
                 </div>
+                
 
                 <div class="w-full">
                     <ul class="flex items-center justify-center">
                         <li class="p-4"><nuxt-link to="/">Home</nuxt-link></li>
                         <li class="p-4"><nuxt-link to="/">Shop</nuxt-link></li>
-                        <li class="p-4"><nuxt-link to="/">Pages</nuxt-link></li>
+                        <li class="p-4"><nuxt-link to="/category">Category</nuxt-link></li>
                         <li class="p-4"><nuxt-link to="/">Contact</nuxt-link></li>
                         <li class="p-4"><nuxt-link to="/">Track Order</nuxt-link></li>
                     </ul>
@@ -67,6 +83,21 @@
 <script>
 export default {
     name:"Header",
+
+    data(){
+        return{
+            categoriesMenu:false
+        }
+    },
+    methods:{
+        openCategories(){
+            this.categoriesMenu=!this.categoriesMenu;
+            console.log(this.categoriesMenu);
+        },
+        menuClose(){
+            this.categoriesMenu=false
+        }
+    }
 }
 </script>
 

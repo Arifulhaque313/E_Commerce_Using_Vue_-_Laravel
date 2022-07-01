@@ -69,8 +69,9 @@ body{
 
    .category-carousel> svg {
     height: 30px;
+    padding: 5px;
     width: 30px;
-    background-color: gray;
+    @apply bg-green-500;
     color: white;
     border-radius: 50%;
     position: absolute;
@@ -85,6 +86,28 @@ body{
 .category-carousel .slick-slide .slick-list> div{
   margin-right: 20px;
 }
+
+
+/* ==================
+   Promo Offer css
+   ================== */
+
+.promo_1{
+  background-image: url('../images/PromoO_1.png');
+}
+
+.promo_2{
+  background-image: url('../images/Promo_2.png');
+}
+
+.product-img-hover{
+  display: none;
+}
+
+.product-img:hover .product-img-hover{
+  display: flex;
+}
+
   
    
     
